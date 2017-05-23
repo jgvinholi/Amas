@@ -6,5 +6,5 @@
 #include <ti/drivers/Power.h>
 #include <stddef.h>
 #include "SPI.h"
-#include "/home/vinholi/workspace_v7/AMAS/Debug/PFatFs/pfatfs.h"
-#include "/home/vinholi/workspace_v7/AMAS/Debug/PFatFs/pffconf.h"
+#include "/home/vinholi/workspace_v7/AMAS/classes/PFatFs/pfatfs.h"
+#include "/home/vinholi/workspace_v7/AMAS/classes/PFatFs/pffconf.h"

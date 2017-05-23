@@ -8,7 +8,7 @@
 #ifndef CLASSES_PH_H_
 #define CLASSES_PH_H_
 #define SensorPin A0            //pH meter Analog output to Arduino Analog Input 0
-#define Offset 0.00            //deviation compensate
+#define Offset 0           //deviation compensate
 #define LED 78
 #define samplingInterval 20
 #define printInterval 800

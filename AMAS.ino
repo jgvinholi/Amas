@@ -1,3 +1,4 @@
+#include <OneWire.h>
 #include "classes/Ph.h"
 #include "classes/SecureDigitalCard.h"
 const int B_RESET = PUSH2;

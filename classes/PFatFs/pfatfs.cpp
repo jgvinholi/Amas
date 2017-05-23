@@ -18,7 +18,7 @@ DIR PFFS::dir_obj;		/* Working copy of DIR */
 //FIL PFFS::fil_obj;		/* Working copy of FIL */
 FILINFO PFFS::fno;		/* Working copy of FILINFO */
 
-unsigned char PFFS::CS;	/* Pin to sd card's CS */
+unsigned char PFFS::cs;	/* Pin to sd card's CS */
 
 uint8_t _clkdivider=4;  //default spi clock 16MHz / 4 = 4MHz
 
@@ -60,17 +60,17 @@ size_t PFFS::write(uint8_t character){
 
 void PFFS::CS_LOW (void)
 {
-	digitalWrite(CS, LOW);
+	digitalWrite(cs, LOW);
 }
 
 void PFFS::CS_HIGH (void)
 {
-	digitalWrite(CS, HIGH);
+	digitalWrite(cs, HIGH);
 }
 
 int PFFS::CS_READ (void)
 {
-	return !digitalRead(CS);
+	return !digitalRead(cs);
 }
 
 /*-----------------------------------------------------------------------*/
@@ -191,8 +191,8 @@ FRESULT PFFS::begin (
 	_clkdivider = clkdivider;
 	FRESULT res;
 	
-	CS = cs_pin;
-	pinMode(CS, OUTPUT);
+	cs = cs_pin;
+	pinMode(cs, OUTPUT);
 #if _SoftSPI
 	pinMode(_SCLK, OUTPUT);
 	pinMode(_MOSI, OUTPUT);
@@ -228,7 +228,7 @@ DSTATUS PFFS::disk_init (
 	DSTATUS res;
 
 	SPI_SET_DIVIDER(_clkdivider);
-	res = disk_initialize();
+	res = disk_initialize_b();
 	SPI_SET_DIVIDER(_clkdivider);
 	
 	return res;

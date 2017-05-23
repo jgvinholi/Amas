@@ -75,6 +75,20 @@ AMAS.o: AMAS.cpp \
  /opt/ti/energia-0101E0017/hardware/emt/ti/runtime/wiring/SPI.h \
  /opt/ti/energia-0101E0017/hardware/emt/ti/runtime/wiring/pins_energia.h \
  /opt/ti/energia-0101E0017/hardware/emt/ti/runtime/wiring/msp432/variants/MSP_EXP432P401R/pins_energia.h \
+ /opt/ti/energia-0101E0017/hardware/msp432/libraries/OneWire/OneWire.h \
+ /opt/ti/energia-0101E0017/hardware/msp432/cores/msp432/driverlib/interrupt.h \
+ /opt/ti/energia-0101E0017/hardware/msp432/cores/msp432/inc/msp.h \
+ /opt/ti/energia-0101E0017/hardware/msp432/cores/msp432/inc/msp432p401r.h \
+ /opt/ti/energia-0101E0017/hardware/msp432/cores/msp432/inc/msp_compatibility.h \
+ /opt/ti/energia-0101E0017/hardware/msp432/cores/msp432/inc/CMSIS/core_cm4.h \
+ /opt/ti/energia-0101E0017/hardware/msp432/cores/msp432/inc/CMSIS/core_cmInstr.h \
+ /opt/ti/energia-0101E0017/hardware/msp432/cores/msp432/inc/CMSIS/core_cmFunc.h \
+ /opt/ti/energia-0101E0017/hardware/msp432/cores/msp432/inc/CMSIS/core_cm4_simd.h \
+ /opt/ti/energia-0101E0017/hardware/emt/ti/runtime/wiring/Arduino.h \
+ /opt/ti/energia-0101E0017/hardware/emt/ti/runtime/wiring/Energia.h \
+ /opt/ti/energia-0101E0017/hardware/emt/ti/drivers/gpio/GPIOMSP432.h \
+ /opt/ti/energia-0101E0017/hardware/emt/ti/drivers/GPIO.h \
+ /opt/ti/energia-0101E0017/hardware/msp432/cores/msp432/driverlib/gpio.h \
  /home/vinholi/workspace_v7/AMAS/classes/Ph.h \
  /home/vinholi/workspace_v7/AMAS/classes/Sensor.h \
  /home/vinholi/workspace_v7/AMAS/classes/Global_Includes.h \
@@ -87,15 +101,16 @@ AMAS.o: AMAS.cpp \
  /opt/ti/energia-0101E0017/hardware/emt/ti/drivers/Power.h \
  /opt/ti/energia-0101E0017/hardware/emt/ti/drivers/utils/List.h \
  /opt/ti/energia-0101E0017/hardware/emt/ti/runtime/wiring/SPI.h \
- /home/vinholi/workspace_v7/AMAS/Debug/PFatFs/pfatfs.h \
+ /home/vinholi/workspace_v7/AMAS/classes/PFatFs/pfatfs.h \
  /opt/ti/energia-0101E0017/hardware/emt/ti/runtime/wiring/Print.h \
- /home/vinholi/workspace_v7/AMAS/Debug/PFatFs/utility/pff.h \
- /home/vinholi/workspace_v7/AMAS/Debug/PFatFs/utility/integer.h \
- /home/vinholi/workspace_v7/AMAS/Debug/PFatFs/utility/../pffconf.h \
- /home/vinholi/workspace_v7/AMAS/Debug/PFatFs/utility/diskio.h \
- /home/vinholi/workspace_v7/AMAS/Debug/PFatFs/utility/integer.h \
- /home/vinholi/workspace_v7/AMAS/Debug/PFatFs/pffconf.h \
- /home/vinholi/workspace_v7/AMAS/Debug/PFatFs/pffconf.h
+ /home/vinholi/workspace_v7/AMAS/classes/PFatFs/utility/pff.h \
+ /home/vinholi/workspace_v7/AMAS/classes/PFatFs/utility/integer.h \
+ /home/vinholi/workspace_v7/AMAS/classes/PFatFs/utility/../pffconf.h \
+ /home/vinholi/workspace_v7/AMAS/classes/PFatFs/utility/diskio.h \
+ /home/vinholi/workspace_v7/AMAS/classes/PFatFs/utility/integer.h \
+ /home/vinholi/workspace_v7/AMAS/classes/PFatFs/pffconf.h \
+ /home/vinholi/workspace_v7/AMAS/classes/PFatFs/pffconf.h \
+ /home/vinholi/workspace_v7/AMAS/classes/SecureDigitalCard.h
 
 /opt/ti/energia-0101E0017/hardware/emt/ti/runtime/wiring/Energia.h:
 
@@ -249,6 +264,34 @@ AMAS.o: AMAS.cpp \
 
 /opt/ti/energia-0101E0017/hardware/emt/ti/runtime/wiring/msp432/variants/MSP_EXP432P401R/pins_energia.h:
 
+/opt/ti/energia-0101E0017/hardware/msp432/libraries/OneWire/OneWire.h:
+
+/opt/ti/energia-0101E0017/hardware/msp432/cores/msp432/driverlib/interrupt.h:
+
+/opt/ti/energia-0101E0017/hardware/msp432/cores/msp432/inc/msp.h:
+
+/opt/ti/energia-0101E0017/hardware/msp432/cores/msp432/inc/msp432p401r.h:
+
+/opt/ti/energia-0101E0017/hardware/msp432/cores/msp432/inc/msp_compatibility.h:
+
+/opt/ti/energia-0101E0017/hardware/msp432/cores/msp432/inc/CMSIS/core_cm4.h:
+
+/opt/ti/energia-0101E0017/hardware/msp432/cores/msp432/inc/CMSIS/core_cmInstr.h:
+
+/opt/ti/energia-0101E0017/hardware/msp432/cores/msp432/inc/CMSIS/core_cmFunc.h:
+
+/opt/ti/energia-0101E0017/hardware/msp432/cores/msp432/inc/CMSIS/core_cm4_simd.h:
+
+/opt/ti/energia-0101E0017/hardware/emt/ti/runtime/wiring/Arduino.h:
+
+/opt/ti/energia-0101E0017/hardware/emt/ti/runtime/wiring/Energia.h:
+
+/opt/ti/energia-0101E0017/hardware/emt/ti/drivers/gpio/GPIOMSP432.h:
+
+/opt/ti/energia-0101E0017/hardware/emt/ti/drivers/GPIO.h:
+
+/opt/ti/energia-0101E0017/hardware/msp432/cores/msp432/driverlib/gpio.h:
+
 /home/vinholi/workspace_v7/AMAS/classes/Ph.h:
 
 /home/vinholi/workspace_v7/AMAS/classes/Sensor.h:
@@ -273,20 +316,22 @@ AMAS.o: AMAS.cpp \
 
 /opt/ti/energia-0101E0017/hardware/emt/ti/runtime/wiring/SPI.h:
 
-/home/vinholi/workspace_v7/AMAS/Debug/PFatFs/pfatfs.h:
+/home/vinholi/workspace_v7/AMAS/classes/PFatFs/pfatfs.h:
 
 /opt/ti/energia-0101E0017/hardware/emt/ti/runtime/wiring/Print.h:
 
-/home/vinholi/workspace_v7/AMAS/Debug/PFatFs/utility/pff.h:
+/home/vinholi/workspace_v7/AMAS/classes/PFatFs/utility/pff.h:
 
-/home/vinholi/workspace_v7/AMAS/Debug/PFatFs/utility/integer.h:
+/home/vinholi/workspace_v7/AMAS/classes/PFatFs/utility/integer.h:
 
-/home/vinholi/workspace_v7/AMAS/Debug/PFatFs/utility/../pffconf.h:
+/home/vinholi/workspace_v7/AMAS/classes/PFatFs/utility/../pffconf.h:
 
-/home/vinholi/workspace_v7/AMAS/Debug/PFatFs/utility/diskio.h:
+/home/vinholi/workspace_v7/AMAS/classes/PFatFs/utility/diskio.h:
 
-/home/vinholi/workspace_v7/AMAS/Debug/PFatFs/utility/integer.h:
+/home/vinholi/workspace_v7/AMAS/classes/PFatFs/utility/integer.h:
 
-/home/vinholi/workspace_v7/AMAS/Debug/PFatFs/pffconf.h:
+/home/vinholi/workspace_v7/AMAS/classes/PFatFs/pffconf.h:
 
-/home/vinholi/workspace_v7/AMAS/Debug/PFatFs/pffconf.h:
+/home/vinholi/workspace_v7/AMAS/classes/PFatFs/pffconf.h:
+
+/home/vinholi/workspace_v7/AMAS/classes/SecureDigitalCard.h:

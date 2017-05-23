@@ -31,7 +31,7 @@ void attach_cs_pin (void (*cs_low)(void), void (*cs_high)(void), int (*cs_read)(
 void attach_dly100u (void (*dly100u)(void));
 void attach_SPIdriver(BYTE (*spi_receive)(void), BYTE (*spi_send)(BYTE));//, void (*spi_set_divider)(BYTE));
 
-DSTATUS disk_initialize ();
+DSTATUS disk_initialize_b ();
 DRESULT disk_readp (BYTE*, DWORD, WORD, WORD);
 DRESULT disk_writep (const BYTE*, DWORD);
 

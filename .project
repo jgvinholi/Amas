@@ -5,6 +5,7 @@
 	<projects>
 		<project>MSP-EXP432P401R_core</project>
 		<project>MSP-EXP432P401R_SD</project>
+		<project>MSP-EXP432P401R_OneWire</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

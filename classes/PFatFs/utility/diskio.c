@@ -114,7 +114,7 @@ BYTE send_cmd (
 /* Initialize Disk Drive                                                 */
 /*-----------------------------------------------------------------------*/
 
-DSTATUS disk_initialize ()
+DSTATUS disk_initialize_b ()
 {
 	BYTE n, cmd, ty, ocr[4];
 	UINT tmr;

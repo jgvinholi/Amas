@@ -8,15 +8,20 @@ GEN_OPTS__FLAG :=
 GEN_CMDS__FLAG := 
 
 ORDERED_OBJS += \
+"./classes/PFatFs/utility/diskio.o" \
+"./classes/PFatFs/utility/pff.o" \
 "./AMAS.o" \
+"./classes/PFatFs/pfatfs.o" \
 "./classes/Ph.o" \
 "./classes/SecureDigitalCard.o" \
 "./classes/Sensor.o" \
+"./classes/StellarisOW/StellarisDS18B20.o" \
 "./classes/Temperature.o" \
 "./main.o" \
 $(GEN_CMDS__FLAG) \
 -Wl,--start-group \
 -Wl,-T"/opt/ti/energia-0101E0017/hardware/emt/ti/runtime/wiring/msp432/linker.cmd" \
+-lMSP-EXP432P401R_OneWire \
 -lMSP-EXP432P401R_core \
 -ldriverlib \
 -lstdc++ \
@@ -34,9 +39,15 @@ RMDIR := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include subdir_vars.mk
+-include classes/PFatFs/subdir_vars.mk
+-include classes/PFatFs/utility/subdir_vars.mk
 -include classes/subdir_vars.mk
+-include classes/StellarisOW/subdir_vars.mk
 -include subdir_rules.mk
+-include classes/PFatFs/subdir_rules.mk
+-include classes/PFatFs/utility/subdir_rules.mk
 -include classes/subdir_rules.mk
+-include classes/StellarisOW/subdir_rules.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -151,12 +162,13 @@ all: $(OBJS) $(GEN_CMDS)
 
 dependents:
 	-cd /home/vinholi/workspace_v7/MSP-EXP432P401R_core/Debug && $(MAKE) all
+	-cd /home/vinholi/workspace_v7/MSP-EXP432P401R_OneWire/Debug && $(MAKE) all
 
 # Tool invocations
-AMAS.out: $(OBJS) $(GEN_CMDS) /home/vinholi/workspace_v7/MSP-EXP432P401R_core/Debug/libMSP-EXP432P401R_core.a
+AMAS.out: $(OBJS) $(GEN_CMDS) /home/vinholi/workspace_v7/MSP-EXP432P401R_core/Debug/libMSP-EXP432P401R_core.a /home/vinholi/workspace_v7/MSP-EXP432P401R_OneWire/Debug/libMSP-EXP432P401R_OneWire.a
 	@echo 'Building target: $@'
 	@echo 'Invoking: GNU Linker'
-	"/opt/ti/energia-0101E0017/hardware/tools/lm4f/bin/arm-none-eabi-gcc" @"/opt/ti/energia-0101E0017/hardware/emt/ti/runtime/wiring/msp432/compiler.opt"  -fno-exceptions -DBOARD_MSP_EXP432P401R -D__MSP432P401R__ -DTARGET_IS_MSP432P4XX -Dxdc__nolocalstring=1 -DENERGIA=17 -DARDUINO=101 -Os -ffunction-sections -fdata-sections -fsingle-precision-constant -g -gdwarf-3 -gstrict-dwarf -Wall -mfloat-abi=hard -Wl,-Map,"AMAS.map" -nostartfiles -static -Wl,--gc-sections -L"/home/vinholi/workspace_v7/MSP-EXP432P401R_core/Debug" -L"/opt/ti/energia-0101E0017/hardware/emt/ti/runtime/wiring/msp432" -L"/opt/ti/energia-0101E0017/hardware/emt/ti/runtime/wiring/msp432/variants/MSP_EXP432P401R" -L"/opt/ti/energia-0101E0017/hardware/emt" -L"/opt/ti/energia-0101E0017/hardware/msp432/variants/MSP_EXP432P401R" -L"/opt/ti/energia-0101E0017/hardware/msp432/cores/msp432/driverlib" -Wl,--no-wchar-size-warning -o"AMAS.out" $(ORDERED_OBJS)
+	"/opt/ti/energia-0101E0017/hardware/tools/lm4f/bin/arm-none-eabi-gcc" @"/opt/ti/energia-0101E0017/hardware/emt/ti/runtime/wiring/msp432/compiler.opt"  -fno-exceptions -DBOARD_MSP_EXP432P401R -D__MSP432P401R__ -DTARGET_IS_MSP432P4XX -Dxdc__nolocalstring=1 -DENERGIA=17 -DARDUINO=101 -Os -ffunction-sections -fdata-sections -fsingle-precision-constant -g -gdwarf-3 -gstrict-dwarf -Wall -mfloat-abi=hard -Wl,-Map,"AMAS.map" -nostartfiles -static -Wl,--gc-sections -L"/home/vinholi/workspace_v7/MSP-EXP432P401R_OneWire/Debug" -L"/home/vinholi/workspace_v7/MSP-EXP432P401R_core/Debug" -L"/opt/ti/energia-0101E0017/hardware/emt/ti/runtime/wiring/msp432" -L"/opt/ti/energia-0101E0017/hardware/emt/ti/runtime/wiring/msp432/variants/MSP_EXP432P401R" -L"/opt/ti/energia-0101E0017/hardware/emt" -L"/opt/ti/energia-0101E0017/hardware/msp432/variants/MSP_EXP432P401R" -L"/opt/ti/energia-0101E0017/hardware/msp432/cores/msp432/driverlib" -Wl,--no-wchar-size-warning -o"AMAS.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -169,14 +181,16 @@ AMAS.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "AMAS.o" "main.o" "classes/Ph.o" "classes/SecureDigitalCard.o" "classes/Sensor.o" "classes/Temperature.o" 
-	-$(RM) "AMAS.d" "main.d" "AMAS.d" "classes/Ph.d" "classes/SecureDigitalCard.d" "classes/Sensor.d" "classes/Temperature.d" 
+	-$(RM) "AMAS.o" "main.o" "classes/PFatFs/pfatfs.o" "classes/PFatFs/utility/diskio.o" "classes/PFatFs/utility/pff.o" "classes/Ph.o" "classes/SecureDigitalCard.o" "classes/Sensor.o" "classes/Temperature.o" "classes/StellarisOW/StellarisDS18B20.o" 
+	-$(RM) "classes/PFatFs/utility/diskio.d" "classes/PFatFs/utility/pff.d" 
+	-$(RM) "AMAS.d" "main.d" "AMAS.d" "classes/PFatFs/pfatfs.d" "classes/Ph.d" "classes/SecureDigitalCard.d" "classes/Sensor.d" "classes/Temperature.d" "classes/StellarisOW/StellarisDS18B20.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 
 .PHONY: all clean dependents
 .SECONDARY:
 /home/vinholi/workspace_v7/MSP-EXP432P401R_core/Debug/libMSP-EXP432P401R_core.a:
+/home/vinholi/workspace_v7/MSP-EXP432P401R_OneWire/Debug/libMSP-EXP432P401R_OneWire.a:
 
 -include ../makefile.targets
 

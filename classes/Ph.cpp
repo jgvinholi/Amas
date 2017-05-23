@@ -35,7 +35,7 @@ unsigned int Ph::loop(){
             if(pHArrayIndex==ArrayLenth)
                 pHArrayIndex=0;
             voltage = averagearray(pHArray, ArrayLenth)*5.0/1024;
-            pHValue = 3.5*voltage+Offset;
+            pHValue = 7 + ((2.5 - voltage) / 0.18);
             samplingTime=millis();
         }
         if(millis() - printTime > printInterval)   //Every 800 milliseconds, print a numerical, convert the state of the LED indicator

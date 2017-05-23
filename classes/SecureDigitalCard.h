@@ -11,17 +11,17 @@
 #define read_buffer 128             // size (in bytes) of read buffer
 #define LOG_DELAY   5000          // 5000ms -> 5sec
 #include "Global_Includes.h"
+
 class SecureDigitalCard
 {
 private:
-    PFFS* fat;
+
     unsigned short int bw, br;
     char buffer[read_buffer], buf[128];
     int rc;
     DIR dir;
     FILINFO fno;
     uint32_t counter;
-    static uint32_t AccStringLength;
     uint8_t StringLength;
     void die(int pff_err), printDec(uint32_t ui);
 public:

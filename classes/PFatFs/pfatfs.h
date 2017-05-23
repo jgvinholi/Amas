@@ -38,7 +38,7 @@ class PFFS
   	//static FIL fil_obj;
   	static FILINFO fno;
   	
-  	static unsigned char CS;
+  	static unsigned char cs;
   	
   	static void CS_LOW (void);
   	static void CS_HIGH (void);
