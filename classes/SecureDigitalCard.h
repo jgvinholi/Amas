@@ -27,7 +27,7 @@ private:
 public:
     SecureDigitalCard();
     virtual ~SecureDigitalCard();
-    void writeToLog(const unsigned int ph_v);
+    void writeToLog(const unsigned int ph_v, const char* t_v);
 };
 
 #endif /* CLASSES_SECUREDIGITALCARD_H_ */

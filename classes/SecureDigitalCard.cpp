@@ -38,7 +38,7 @@ void SecureDigitalCard::printDec(uint32_t ui)
 /*-----------------------------------------------------------------------*/
 /* Program Main                                                          */
 /*-----------------------------------------------------------------------*/
-void SecureDigitalCard::writeToLog(const unsigned int ph_v)
+void SecureDigitalCard::writeToLog(const unsigned int ph_v, const char* t_v)
 {
 
     PFFS fat = PFFS();
@@ -46,13 +46,6 @@ void SecureDigitalCard::writeToLog(const unsigned int ph_v)
     counter = 0;
     Serial.begin(9600);
     fat.begin(cs_pin);
-    #if 0
-    Serial.println();
-    Serial.println("Press button to start...");
-    while(digitalRead(PUSH2)==1){}
-    delay(100);
-    while(digitalRead(PUSH2)==0){}
-    #endif
 
     #if DEBUG
     Serial.println();
@@ -64,7 +57,7 @@ void SecureDigitalCard::writeToLog(const unsigned int ph_v)
     if (rc) die(rc);
     delay(100);
     bw=0;
-    sprintf(buf, "PH = %u. AMAS está rodando há %lu horas.\n\n", ph_v, millis()/(1000*3600));
+    sprintf(buf, "pH = %u, T = %c Celsius. AMAS está rodando há %lu horas.\n\n", ph_v, t_v, millis()/(1000*3600));
     //sprintf( buf, "%u Current temperature is %lu.%lu\r\n", counter, ui32_ReadTemp/10, ui32_ReadTemp%10 );
     counter++;
     StringLength =  strlen(buf);

@@ -18,7 +18,9 @@ class Temperature: public Sensor
 private:
 
     int S_TEMP;
-    void loop(),findOW(), readOW(uint8_t ROMno), saveTemperature(uint8_t ROMno), tempCMD();
+    void findOW(), displayOW(), readOW(uint8_t ROMno), saveTemperature(uint8_t ROMno), tempCMD();
+    int returnOW();
+    char* loop();
     byte ROMarray[MAXOW][8];
     byte ROMtype[MAXOW];     // 28 for temp', 12 for switch etc.
     byte ROMtemp[MAXOW];
@@ -33,7 +35,7 @@ private:
 public:
     Temperature(int pn);
     virtual ~Temperature();
-    int setup();
+    char* setup();
 };
 
 #endif /* CLASSES_TEMPERATURE_H_ */

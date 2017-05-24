@@ -110,7 +110,9 @@ AMAS.o: AMAS.cpp \
  /home/vinholi/workspace_v7/AMAS/classes/PFatFs/utility/integer.h \
  /home/vinholi/workspace_v7/AMAS/classes/PFatFs/pffconf.h \
  /home/vinholi/workspace_v7/AMAS/classes/PFatFs/pffconf.h \
- /home/vinholi/workspace_v7/AMAS/classes/SecureDigitalCard.h
+ /home/vinholi/workspace_v7/AMAS/classes/SecureDigitalCard.h \
+ /home/vinholi/workspace_v7/AMAS/classes/Temperature.h \
+ /home/vinholi/workspace_v7/AMAS/classes/StellarisOW/StellarisDS18B20.h
 
 /opt/ti/energia-0101E0017/hardware/emt/ti/runtime/wiring/Energia.h:
 
@@ -335,3 +337,7 @@ AMAS.o: AMAS.cpp \
 /home/vinholi/workspace_v7/AMAS/classes/PFatFs/pffconf.h:
 
 /home/vinholi/workspace_v7/AMAS/classes/SecureDigitalCard.h:
+
+/home/vinholi/workspace_v7/AMAS/classes/Temperature.h:
+
+/home/vinholi/workspace_v7/AMAS/classes/StellarisOW/StellarisDS18B20.h:
