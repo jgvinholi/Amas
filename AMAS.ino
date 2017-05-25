@@ -24,6 +24,10 @@ void setup() {
 
 void loop() {
     ph_v = ph_sensor->setup();
+    ph_sensor->sWrite("pH obtido.\n");
+    delay(3000);
     t_v = t_sensor->setup();
+    ph_sensor->sWrite("Temperatura obtida.\n");
     sdc->writeToLog(ph_v,t_v);
+    ph_sensor->sWrite("Escrito ao SDC");
 }
