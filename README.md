@@ -6,6 +6,7 @@ There's an old mine that has been abandoned for several years, in the south of B
 * [Servomotor](https://www.wikiwand.com/en/Servomotor) (x2)
 * [DS18B20 Thermometer](https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf) (Only implemented on software.)
 * [Analog pHmeter + Generic pH Sensor Module](https://forum.arduino.cc/index.php?topic=336012.0) (Detailed informations are on one of the commentaries of the link.)
+* [Generic MicroSDC Module](https://www.arduino.cc/en/Tutorial/ReadWrite)
 
 ## Getting Started
 
