@@ -14,7 +14,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Building
 You'll need to install the following applications to build this project:
-* Git
+* [Git](https://git-scm.com/downloads)
 * [VSCode](https://code.visualstudio.com/)
 * [PlatformIO Plugin for VSCode](http://docs.platformio.org/en/latest/ide/vscode.html)
 * [Arduino IDE](https://www.arduino.cc/en/main/software)
