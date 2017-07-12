@@ -2,6 +2,11 @@
 
 There's an old mine that has been abandoned for several years, in the south of Brazil. Due to not being closed properly, this mine is releasing highly toxic substances to the local enviroment, through the water that flows out of the abandoned facility. This project is aimed to take pH measures from this contamined water and, with the data collected, aid researchers to more easily detect the usefulness of their work - consisted by seeking for methods to purificate the water.
 
+### Sensors and Modules
+* [Servomotor](https://www.wikiwand.com/en/Servomotor) (x2)
+* [DS18B20 Thermometer](https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf) (Only implemented on software.)
+* [Analog pHmeter + Generic pH Sensor Module](https://forum.arduino.cc/index.php?topic=336012.0) (Detailed informations are on one of the commentaries of the link.)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
