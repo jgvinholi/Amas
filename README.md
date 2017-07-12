@@ -1,4 +1,4 @@
-# Acquatic Measurements Automated System
+# Aquatic Measurements Automated System
 
 There's an old mine that has been abandoned for several years, in the south of Brazil. Due to not being closed properly, this mine is releasing highly toxic substances to the local enviroment, through the water that flows out of the abandoned facility. This project is aimed to take pH measures from this contamined water and, with the data collected, aid researchers to more easily detect the usefulness of their work - consisted by seeking for methods to purificate the water.
 
